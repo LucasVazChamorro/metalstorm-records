@@ -22,12 +22,15 @@
                 <h1>Metal Storm Records</h1>
             </div>
             <nav role="navigation" aria-label="Navegação principal">
-                <ul>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#produtos">Catálogo</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                    <li><button id="abrir-carrinho" aria-label="Abrir carrinho de compras">🛒 Carrinho</button></li>
-                </ul>
+                <button id="menu-toggle" aria-label="Abrir menu">☰</button>
+                <div id="menu-mobile">
+                    <ul>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#produtos">Catálogo</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                        <li><button id="abrir-carrinho" aria-label="Abrir carrinho de compras">🛒 Carrinho</button></li>
+                    </ul>
+                </div>
             </nav>
         </div>
     </header>
@@ -88,6 +91,8 @@
         <p>© 2025 Metal Storm Records — Todos os direitos reservados.</p>
     </footer>
     <div id="mensagem-alerta" class="mensagem-alerta" hidden></div>
+    <div id="overlay-carrinho" class="overlay" hidden></div>
+
 
     <!-- SCRIPTS -->
     <script src="main.js"></script>

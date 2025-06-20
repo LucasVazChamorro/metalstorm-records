@@ -3,10 +3,33 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnFechar = document.getElementById('fechar-carrinho');
   const btnLimpar = document.getElementById('limpar-carrinho');
   const painelCarrinho = document.getElementById('carrinho');
+  const overlay = document.getElementById('overlay-carrinho');
+
+  btnAbrir.addEventListener('click', () => {
+    painelCarrinho.hidden = false;
+    overlay.hidden = false;
+    atualizarCarrinhoVisual();
+  });
+
+  btnFechar.addEventListener('click', () => {
+    painelCarrinho.hidden = true;
+    overlay.hidden = true;
+  });
+
+  overlay.addEventListener('click', () => {
+    painelCarrinho.hidden = true;
+    overlay.hidden = true;
+  });
+
+  const menuToggle = document.getElementById('menu-toggle');
+  const menuMobile = document.getElementById('menu-mobile');
 
   // Garante que o carrinho inicie fechado
   if (painelCarrinho) {
     painelCarrinho.hidden = true;
+  }
+  if (overlay) {
+    overlay.hidden = true;
   }
 
   // Carrega os produtos
@@ -44,6 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (btnAbrir && painelCarrinho) {
     btnAbrir.addEventListener('click', () => {
       painelCarrinho.hidden = false;
+      if (overlay) overlay.hidden = false;
       atualizarCarrinhoVisual();
     });
   }
@@ -51,6 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (btnFechar && painelCarrinho) {
     btnFechar.addEventListener('click', () => {
       painelCarrinho.hidden = true;
+      if (overlay) overlay.hidden = true;
     });
   }
 
@@ -60,7 +85,21 @@ document.addEventListener('DOMContentLoaded', () => {
       atualizarCarrinhoVisual();
     });
   }
+
+  if (overlay) {
+    overlay.addEventListener('click', () => {
+      painelCarrinho.hidden = true;
+      overlay.hidden = true;
+    });
+  }
+
+  if (menuToggle && menuMobile) {
+    menuToggle.addEventListener('click', () => {
+      menuMobile.classList.toggle('ativo');
+    });
+  }
 });
+
 
 function adicionarAoCarrinho(produto) {
   const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
