@@ -13,7 +13,7 @@ Este projeto foi desenvolvido como parte do meu aprendizado contínuo em desenvo
 
 - `index.html`: Estrutura completa da página com HTML semântico  
 - `metalstorm.css`: Estilização visual com foco em contraste, responsividade e identidade dark  
-- `main.js`: Lógica JavaScript pura para carregar e renderizar produtos dinamicamente  
+- `main.js`: Lógica JavaScript pura para carregamento dinâmico de produtos e funcionamento do carrinho  
 - `produtos.json`: Arquivo externo com os dados dos CDs (nome da banda, álbum, preço e imagem)  
 - `imagens/`: Pasta com todas as imagens utilizadas no site (logo, seções e capas de álbuns)
 
@@ -24,7 +24,7 @@ Este projeto foi desenvolvido como parte do meu aprendizado contínuo em desenvo
 ✅ Estrutura semântica completa (`<header>`, `<section>`, `<footer>`)  
 ✅ Organização clara e acessível de conteúdo  
 ✅ Formulário de contato funcional com `input`, `textarea` e `button`  
-✅ Responsividade por estrutura combinada com CSS  
+✅ Inclusão de botão de carrinho e painel lateral para compras  
 
 ---
 
@@ -34,16 +34,20 @@ Este projeto foi desenvolvido como parte do meu aprendizado contínuo em desenvo
 ✅ Paleta de cores escura com destaque em vermelho e branco  
 ✅ Uso de `Flexbox` e `Grid` para layout responsivo  
 ✅ Efeitos de `hover`, transições e sombras  
-✅ Tipografia impactante e estilizada  
+✅ Estilo especial para mensagens de feedback e botão de remover produto  
 
 ---
 
 ## 🧠 O que foi feito com **JavaScript**
 
 ✅ Leitura de dados externos via `fetch('produtos.json')`  
-✅ Geração dinâmica de elementos HTML com `createElement()`  
-✅ Inserção automática dos produtos na grade com `innerHTML`  
-✅ Tratamento de erros de carregamento  
+✅ Geração dinâmica de produtos com `createElement()` e `innerHTML`  
+✅ Implementação completa de carrinho de compras com `localStorage`  
+✅ Funcionalidade de abrir e fechar o carrinho manualmente  
+✅ Confirmação visual ao adicionar um CD ao carrinho  
+✅ Remoção de itens individuais diretamente do carrinho  
+✅ Feedbacks com mensagens visuais temporárias (estilo toast)  
+✅ Atualização automática de total e itens no carrinho  
 
 ---
 
@@ -60,9 +64,10 @@ Este projeto foi desenvolvido como parte do meu aprendizado contínuo em desenvo
 
 - ✅ Loja de CDs de heavy metal estilizada e responsiva  
 - ✅ Produtos carregados de forma dinâmica com JavaScript  
-- ✅ Imagens e identidade visual personalizadas  
+- ✅ Carrinho funcional com adicionar, remover, limpar e persistência  
+- ✅ Feedback visual com mensagens ao usuário  
 - ✅ Organização de arquivos como em projetos profissionais  
-- ✅ Pronto para ser integrado com carrinho de compras via `localStorage`  
+- ✅ Projeto pronto para futuras integrações com back-end  
 
 ---
 

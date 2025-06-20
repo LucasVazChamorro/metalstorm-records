@@ -4,78 +4,90 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Metal Storm Records</title>
+    <meta name="description"
+        content="Loja virtual de CDs de heavy metal. Compre clássicos do metal com visual poderoso e responsivo." />
+    <meta name="author" content="Lucas Chamorro" />
+    <meta name="robots" content="index, follow" />
+    <title>Metal Storm Records | Loja de CDs de Heavy Metal</title>
     <link rel="stylesheet" href="metalstorm.css" />
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
 </head>
 
 <body>
     <!-- NAVBAR -->
-    <div class="navbar">
+    <header class="navbar" role="banner">
         <div class="header-inner">
             <div class="logo">
-                <img src="imagens/logo-metalstorm.png" alt="Logo Metal Storm" />
+                <img src="imagens/logo-metalstorm.png"
+                    alt="Logo da Metal Storm Records com caveira e raios estilizados" />
                 <h1>Metal Storm Records</h1>
             </div>
-            <nav>
+            <nav role="navigation" aria-label="Navegação principal">
                 <ul>
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#produtos">Catálogo</a></li>
                     <li><a href="#contato">Contato</a></li>
+                    <li><button id="abrir-carrinho" aria-label="Abrir carrinho de compras">🛒 Carrinho</button></li>
                 </ul>
             </nav>
         </div>
-    </div>
+    </header>
+
+    <!-- CARRINHO SIDEBAR -->
+    <aside id="carrinho" class="carrinho" aria-label="Carrinho de compras" hidden>
+        <h2>🛒 Seu Carrinho</h2>
+        <ul id="lista-carrinho"></ul>
+        <p id="total-carrinho">Total: R$ 0,00</p>
+        <button id="limpar-carrinho">🗑️ Limpar carrinho</button>
+        <button id="fechar-carrinho" type="button">Fechar</button>
+    </aside>
 
     <!-- SOBRE A LOJA -->
-    <section id="sobre" class="sobre">
+    <section id="sobre" class="sobre" aria-labelledby="titulo-sobre">
         <div class="header-inner sobre-container">
             <div class="texto">
-                <h2>Bem-vindo à Metal Storm Records</h2>
+                <h2 id="titulo-sobre">Bem-vindo à Metal Storm Records</h2>
                 <p>Somos apaixonados por riffs pesados e batidas brutais. Nossa missão é levar o melhor do heavy metal
                     mundial até você. Do clássico ao extremo, temos discos que farão sua cabeça bater com orgulho.
                     Explore nossa coleção e entre para o culto do metal!</p>
             </div>
             <div class="imagem">
-                <img src="./imagens/sobre-metal.png" alt="Loja Metal" />
+                <img src="imagens/sobre-metal.png"
+                    alt="Interior de uma loja de heavy metal com estantes de CDs, amplificadores e pôsteres nas paredes" />
             </div>
         </div>
     </section>
 
     <!-- CATÁLOGO -->
-    <section id="produtos" class="catalogo">
-        <h2>CDs em Destaque</h2>
+    <section id="produtos" class="catalogo" aria-labelledby="titulo-catalogo">
+        <h2 id="titulo-catalogo">CDs em Destaque</h2>
         <div class="produtos-grid"></div>
     </section>
 
     <!-- CONTATO -->
-    <section id="contato" class="contato">
-        <h2>Fale com a gente</h2>
-        <form>
+    <section id="contato" class="contato" aria-labelledby="titulo-contato">
+        <h2 id="titulo-contato">Fale com a gente</h2>
+        <form aria-label="Formulário de contato">
             <div class="form-campo">
                 <label for="nome">Nome</label>
-                <input type="text" id="nome" placeholder="Seu nome completo" />
+                <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required />
             </div>
             <div class="form-campo">
                 <label for="email">E-mail</label>
-                <input type="email" id="email" placeholder="seu@email.com" />
+                <input type="email" id="email" name="email" placeholder="seu@email.com" required />
             </div>
             <div class="form-campo">
                 <label for="mensagem">Mensagem</label>
-                <textarea id="mensagem" placeholder="Sua mensagem..."></textarea>
+                <textarea id="mensagem" name="mensagem" placeholder="Sua mensagem..." required></textarea>
             </div>
             <button type="submit">Enviar</button>
         </form>
     </section>
 
     <!-- RODAPÉ -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <p>© 2025 Metal Storm Records — Todos os direitos reservados.</p>
     </footer>
+    <div id="mensagem-alerta" class="mensagem-alerta" hidden></div>
 
     <!-- SCRIPTS -->
     <script src="main.js"></script>
