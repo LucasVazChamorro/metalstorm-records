@@ -1,0 +1,74 @@
+[
+  {
+    "banda": "Iron Maiden",
+    "album": "The Number of the Beast",
+    "preco": 69.9,
+    "imagem": "imagens/capas/iron-maiden.jpg"
+  },
+  {
+    "banda": "Metallica",
+    "album": "Master of Puppets",
+    "preco": 79.9,
+    "imagem": "imagens/capas/metallica.jpg"
+  },
+  {
+    "banda": "Black Sabbath",
+    "album": "Paranoid",
+    "preco": 59.9,
+    "imagem": "imagens/capas/black-sabbath.jpg"
+  },
+  {
+    "banda": "Slayer",
+    "album": "Reign in Blood",
+    "preco": 74.9,
+    "imagem": "imagens/capas/slayer.jpg"
+  },
+  {
+    "banda": "Pantera",
+    "album": "Vulgar Display of Power",
+    "preco": 69.9,
+    "imagem": "imagens/capas/pantera.jpg"
+  },
+  {
+    "banda": "Judas Priest",
+    "album": "Painkiller",
+    "preco": 64.9,
+    "imagem": "imagens/capas/judas-priest.jpg"
+  },
+  {
+    "banda": "Megadeth",
+    "album": "Rust in Peace",
+    "preco": 69.9,
+    "imagem": "imagens/capas/megadeth.jpg"
+  },
+  {
+    "banda": "Sepultura",
+    "album": "Roots",
+    "preco": 54.9,
+    "imagem": "imagens/capas/sepultura.jpg"
+  },
+  {
+    "banda": "Anthrax",
+    "album": "Among the Living",
+    "preco": 59.9,
+    "imagem": "imagens/capas/anthrax.jpg"
+  },
+  {
+    "banda": "Kreator",
+    "album": "Enemy of God",
+    "preco": 64.9,
+    "imagem": "imagens/capas/kreator.jpg"
+  },
+  {
+    "banda": "Mercyful Fate",
+    "album": "Don't Break the Oath",
+    "preco": 62.9,
+    "imagem": "imagens/capas/mercyful-fate.jpg"
+  },
+  {
+    "banda": "Death Angel",
+    "album": "The Ultra-Violence",
+    "preco": 58.9,
+    "imagem": "imagens/capas/death-angel.jpg"
+  }
+]
